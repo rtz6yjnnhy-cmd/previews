@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Category 1 Kitchen Remodeling · Preview</title>
+<meta name="description" content="Kitchens, cabinets and bathrooms remodeled by Leo Cabrera's crew across metro Atlanta. 5.0 on Google from 103 reviews.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #eeecea;
+  --surface: #e4e1dd;
+  --ink: #333231;
+  --muted: #5f5b57;
+  --accent: #5c6b54;
+  --accent-ink: #ffffff;
+  --field-1: #cdc3b6;
+  --field-1-ink: #333231;
+  --finish: #f4f2ee;
+
+  --step-small: 16px;
+  --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --step-poster: clamp(64px, 10vw, 150px);
+
+  --m: clamp(20px, 2vw, 28px);
+  --gap-section: clamp(120px, 14vw, 200px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Schibsted Grotesk", system-ui, sans-serif;
+  font-size: var(--step-body); line-height: 1.45; letter-spacing: -0.01em;
+  font-kerning: normal;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+h1, h2, h3, p { margin: 0; }
+.wrap { padding-inline: var(--m); }
+
+/* Preview notice */
+.notice {
+  background: var(--field-1); color: var(--field-1-ink);
+  padding: 10px var(--m); font-size: var(--step-small); font-weight: 600; max-width: none;
+}
+
+/* Hero */
+.hero { position: relative; height: 100svh; min-height: 620px; overflow: hidden; }
+.nav {
+  position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: baseline;
+  padding: var(--m);
+}
+.wordmark { font-weight: 800; font-size: var(--step-small); text-decoration: none; letter-spacing: -0.02em; }
+.nav ul { list-style: none; display: flex; gap: 24px; margin: 0; padding: 0; font-weight: 600; font-size: var(--step-small); }
+.nav a { text-decoration: none; transition: color .2s var(--ease); }
+.nav a:hover { color: var(--accent); }
+.hero-copy { position: relative; z-index: 2; padding: 0 var(--m); margin-top: clamp(40px, 7vh, 96px); max-width: calc(34ch + 2 * var(--m)); }
+.hero-copy p { font-size: var(--step-lead); line-height: 1.3; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 24px; margin-top: 28px; }
+.btn {
+  display: inline-block; background: var(--ink); color: var(--bg); text-decoration: none;
+  font-weight: 600; font-size: var(--step-body); padding: 16px 24px; border-radius: 0;
+  transition: background-color .2s var(--ease), transform .15s var(--ease);
+}
+.btn:hover { background: var(--accent); color: var(--accent-ink); }
+.btn:active { transform: scale(.97); }
+.rating { font-weight: 600; font-size: var(--step-small); }
+.monument {
+  position: absolute; left: -8vw; bottom: -6%; margin: 0;
+  font-weight: 800; font-size: clamp(360px, 46vw, 760px); line-height: .8; letter-spacing: -0.05em;
+  white-space: nowrap; color: var(--accent); transform-origin: 30% 100%;
+}
+
+/* Showcase: the live thing */
+.showcase { display: grid; grid-template-columns: 1fr 1fr; min-height: 88svh; background: var(--surface); margin-top: var(--gap-section); }
+.plate { padding: 40px; display: grid; place-items: center; }
+.plate svg { width: 100%; height: auto; aspect-ratio: 1; }
+.plate .door { fill: var(--finish); transition: fill .45s var(--ease); }
+.choose { display: flex; flex-direction: column; justify-content: space-between; padding: 40px var(--m) 40px 0; gap: 48px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+.tab {
+  font: inherit; font-size: var(--step-body); font-weight: 600; background: none; border: 0; padding: 6px 0; cursor: pointer;
+  color: var(--muted); transition: color .2s var(--ease), transform .15s var(--ease);
+}
+.tab[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+.tab:hover { color: var(--accent); }
+.tab:active { transform: scale(.96); }
+.choose h2 { font-size: var(--step-head); font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; }
+.choose .desc { margin-top: 48px; max-width: 34ch; }
+.cells { display: grid; grid-template-columns: 1fr 1fr; }
+.cell {
+  display: flex; align-items: center; padding: 14px 20px; min-height: 72px; text-decoration: none; font-weight: 600;
+  transition: background-color .2s var(--ease), transform .15s var(--ease);
+}
+.cell:active { transform: scale(.98); }
+.cell.ink { background: var(--ink); color: var(--bg); }
+.cell.ink:hover { background: var(--accent); color: var(--accent-ink); }
+.cell.tone { background: var(--field-1); color: var(--field-1-ink); }
+.cell.tone:hover { background: var(--bg); }
+
+/* Services poster */
+.poster { padding: 80px var(--m); margin-top: var(--gap-section); }
+.poster ul { list-style: none; margin: 0; padding: 0; }
+.poster li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 24px;
+  font-size: var(--step-poster); font-weight: 800; line-height: .92; letter-spacing: -0.05em; text-transform: lowercase;
+  transition: color .25s var(--ease);
+}
+.poster li:hover { color: var(--accent); }
+.poster li span { font-size: var(--step-body); font-weight: 600; letter-spacing: -0.01em; line-height: 1; font-variant-numeric: tabular-nums; text-transform: none; color: var(--ink); text-align: right; }
+.poster .note { margin-top: 40px; font-size: var(--step-body); max-width: 60ch; }
+
+/* Process diagonal */
+.process { margin-top: var(--gap-section); padding-inline: var(--m); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 20px; }
+.process h2 { grid-column: 7 / 13; grid-row: 1; font-size: var(--step-head); font-weight: 400; letter-spacing: -0.04em; line-height: 1; align-self: start; }
+.stage img { width: 100%; height: 100%; object-fit: cover; }
+.s1 { grid-column: 1 / 5; grid-row: 1 / 3; aspect-ratio: 3 / 4; }
+.t1 { grid-column: 5 / 9; grid-row: 2; align-self: start; }
+.s2 { grid-column: 6 / 9; grid-row: 3; aspect-ratio: 1; margin-top: 60px; }
+.t2 { grid-column: 9 / 13; grid-row: 3; margin-top: 60px; align-self: start; }
+.s3 { grid-column: 8 / 13; grid-row: 4; aspect-ratio: 16 / 10; margin-top: 180px; }
+.t3 { grid-column: 3 / 8; grid-row: 4; margin-top: 180px; align-self: start; padding-right: 20px; }
+.process p { font-size: var(--step-body); max-width: 36ch; }
+.process p b { font-weight: 800; }
+.t1 { margin-top: 32px; }
+
+/* Proof table */
+.proof { margin-top: var(--gap-section); padding-inline: var(--m); }
+.proof h2 { font-size: var(--step-head); font-weight: 800; letter-spacing: -0.05em; line-height: .95; }
+.proof h2 span { display: block; padding-left: calc(2 * (100vw - 2 * var(--m)) / 12); }
+.proof table { width: 100%; border-collapse: collapse; margin-top: 72px; font-size: var(--step-body); font-variant-numeric: tabular-nums; }
+.proof td { padding: 14px 12px; vertical-align: baseline; }
+.proof tr:nth-child(even) td { background: var(--surface); }
+.proof td:first-child { width: 16.66%; font-weight: 600; }
+.proof td:nth-child(2) { width: 33.33%; }
+.proof td:nth-child(3) { width: 33.33%; }
+.proof td:last-child { text-align: right; font-weight: 800; }
+.proof .src { margin-top: 24px; font-size: var(--step-small); max-width: 60ch; }
+
+/* Gallery */
+.gallery { margin-top: var(--gap-section); padding-inline: var(--m); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 20px; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; }
+.gallery figcaption { margin-top: 10px; font-size: var(--step-small); color: var(--muted); }
+.g1 { grid-column: 1 / 5; grid-row: 1; } .g1 .frame { aspect-ratio: 3 / 4; }
+.g2 { grid-column: 7 / 13; grid-row: 1; margin-top: 30vh; } .g2 .frame { aspect-ratio: 5 / 4; overflow: hidden; }
+.g3 { grid-column: 6 / 12; grid-row: 2; margin-top: 24vh; } .g3 .frame { aspect-ratio: 3 / 2; }
+.frame { overflow: hidden; }
+.drift { animation: drift 24s var(--ease) infinite alternate; }
+@keyframes drift { from { transform: scale(1); } to { transform: scale(1.08) translateX(-2%); } }
+
+/* Contact */
+.contact {
+  margin-top: var(--gap-section); min-height: 100svh; background: var(--ink); color: var(--bg);
+  display: grid; grid-template-rows: auto 1fr auto; padding: var(--m);
+}
+.contact .ask { font-size: var(--step-lead); max-width: 30ch; }
+.phone {
+  align-self: end; margin-bottom: 12vh; display: block; text-decoration: none;
+  font-size: 12.5vw; font-weight: 400; letter-spacing: -0.05em; line-height: .9; white-space: nowrap;
+  transition: color .25s var(--ease);
+}
+.phone:hover { color: var(--field-1); }
+.contact .corners { display: flex; justify-content: space-between; gap: 24px; font-size: var(--step-small); flex-wrap: wrap; }
+
+/* Footer */
+footer {
+  background: var(--ink); color: var(--bg); min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto;
+  padding: 40px var(--m) 20px;
+}
+.cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; font-size: var(--step-small); }
+.cols p, .cols li { color: #c9c5c0; }
+.cols p:first-child, .cols .head { color: var(--bg); font-weight: 600; }
+.cols ul { list-style: none; margin: 0; padding: 0; }
+.credits { font-size: var(--step-small); color: #e4e1dd; max-width: 70ch; margin-top: 48px; }
+.credits a { color: var(--bg); }
+.endmark { font-weight: 800; font-size: 20.5vw; letter-spacing: -0.06em; line-height: .8; white-space: nowrap; margin: 0 0 20px -0.05em; transform-origin: 0 100%; }
+.legal { font-size: var(--step-small); color: #c9c5c0; }
+
+/* Motion: entrances (content stays visible without script) */
+.js .rise { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js .rise.in { opacity: 1; transform: none; }
+@supports (animation-timeline: scroll()) {
+  .monument { animation: shrink linear both; animation-timeline: scroll(root); animation-range: 0 100svh; }
+  @keyframes shrink { to { transform: scale(.93); } }
+  .endmark { animation: grow linear both; animation-timeline: view(); animation-range: entry 0% cover 40%; }
+  @keyframes grow { from { transform: scale(.94); } to { transform: scale(1); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .rise { opacity: 1; transform: none; transition: none; }
+  .monument, .endmark, .drift { animation: none !important; }
+  * { transition-duration: 0s !important; }
+}
+
+/* Phone */
+@media (max-width: 760px) {
+  .nav ul { display: none; }
+  .nav .menu { display: inline; }
+  .hero-copy { max-width: 55%; margin-top: 24px; }
+  
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .btn { padding: 14px 16px; white-space: nowrap; }
+  .monument {
+    writing-mode: vertical-rl; left: auto; right: -12vw; top: 64px; bottom: auto;
+    font-size: 62vw; line-height: .8;
+  }
+  .showcase { grid-template-columns: 1fr; }
+  .plate { padding: 16px; }
+  .choose { padding: 24px 16px 32px; gap: 28px; }
+  
+  .choose .desc { margin-top: 20px; }
+  
+  .cells { grid-template-columns: 1fr; }
+  .cell { min-height: 60px; }
+  .poster li { font-size: 11.5vw; gap: 12px; }
+  .poster li span { white-space: nowrap; }
+  .process { display: block; }
+  .process h2 { margin-bottom: 32px; }
+  .stage { margin: 0 0 16px; }
+  .s1 { width: 100%; } .s2 { width: 62%; margin-left: auto; margin-top: 56px; } .s3 { width: 78%; margin-top: 56px; }
+  .t1, .t2, .t3 { margin-top: 0; padding: 0; }
+  .t2 { margin-left: 38%; }
+  
+  .proof h2 span { padding-left: 0; }
+  .proof table, .proof tbody, .proof tr, .proof td { display: block; width: 100% !important; }
+  .proof td { padding: 2px 12px; text-align: left !important; }
+  .proof tr { padding: 12px 0; }
+  .proof tr:nth-child(even) { background: var(--surface); }
+  .gallery { display: block; }
+  .g1 { width: 70%; } .g2 { width: 84%; margin: 64px 0 0 auto; } .g3 { width: 100%; margin-top: 64px; }
+  .phone { font-size: 13vw; }
+  .contact .corners { flex-direction: column; gap: 12px; }
+  .cols { grid-template-columns: 1fr 1fr; }
+  .endmark { font-size: 20vw; }
+}
+@media (min-width: 761px) { .nav .menu { display: none; } }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<p class="notice"><span style="display:block;max-width:75ch">Website preview made for Category 1 Kitchen Remodeling by Daniel, a local web designer. Not live yet. Photos are stand-ins until we use yours.</span></p>
+
+<header class="hero">
+  <nav class="nav" aria-label="Main">
+    <a class="wordmark" href="#top">Category 1</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="menu wordmark" href="#contact">Contact</a>
+  </nav>
+  <div class="hero-copy" id="top">
+    <h1 class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Category 1 Kitchen Remodeling</h1>
+    <p>Kitchens, cabinets and bathrooms remodeled by Leo Cabrera's crew across metro Atlanta. Rated 5.0 on Google by 103 customers.</p>
+    <div class="hero-actions">
+      <a class="btn" href="tel:+17708715222">Call (770) 871-5222</a>
+    </div>
+  </div>
+  <p class="monument" aria-hidden="true">category</p>
+</header>
+
+<main>
+  <section class="showcase" aria-labelledby="pick">
+    <div class="plate rise">
+      <svg viewBox="0 0 600 600" role="img" aria-label="Drawing of a kitchen wall with the chosen cabinet finish">
+        <rect width="600" height="600" fill="#d9d4ce"/>
+        <!-- upper cabinets -->
+        <rect class="door" x="40" y="60" width="108" height="170"/>
+        <rect class="door" x="154" y="60" width="108" height="170"/>
+        <rect fill="#9b9690" x="268" y="60" width="128" height="120"/>
+        <rect fill="#b5b0aa" x="292" y="180" width="80" height="50"/>
+        <rect class="door" x="402" y="60" width="78" height="170"/>
+        <rect class="door" x="486" y="60" width="78" height="170"/>
+        <!-- handles -->
+        <rect fill="#333231" x="136" y="190" width="6" height="30"/>
+        <rect fill="#333231" x="160" y="190" width="6" height="30"/>
+        <rect fill="#333231" x="468" y="190" width="6" height="30"/>
+        <rect fill="#333231" x="492" y="190" width="6" height="30"/>
+        <!-- backsplash tiles -->
+        <g fill="#f1eeea">
+          <rect x="40" y="236" width="56" height="24"/><rect x="100" y="236" width="56" height="24"/><rect x="160" y="236" width="56" height="24"/><rect x="220" y="236" width="56" height="24"/><rect x="280" y="236" width="56" height="24"/><rect x="340" y="236" width="56" height="24"/><rect x="400" y="236" width="56" height="24"/><rect x="460" y="236" width="56" height="24"/><rect x="520" y="236" width="44" height="24"/>
+          <rect x="40" y="264" width="26" height="24"/><rect x="70" y="264" width="56" height="24"/><rect x="130" y="264" width="56" height="24"/><rect x="190" y="264" width="56" height="24"/><rect x="250" y="264" width="56" height="24"/><rect x="310" y="264" width="56" height="24"/><rect x="370" y="264" width="56" height="24"/><rect x="430" y="264" width="56" height="24"/><rect x="490" y="264" width="56" height="24"/><rect x="550" y="264" width="14" height="24"/>
+          <rect x="40" y="292" width="56" height="24"/><rect x="100" y="292" width="56" height="24"/><rect x="160" y="292" width="56" height="24"/><rect x="220" y="292" width="56" height="24"/><rect x="280" y="292" width="56" height="24"/><rect x="340" y="292" width="56" height="24"/><rect x="400" y="292" width="56" height="24"/><rect x="460" y="292" width="56" height="24"/><rect x="520" y="292" width="44" height="24"/>
+        </g>
+        <!-- countertop -->
+        <rect fill="#333231" x="28" y="320" width="548" height="22"/>
+        <!-- range -->
+        <rect fill="#4a4846" x="268" y="342" width="128" height="200"/>
+        <rect fill="#2a2928" x="284" y="380" width="96" height="120"/>
+        <!-- lower cabinets -->
+        <rect class="door" x="40" y="342" width="108" height="56"/>
+        <rect class="door" x="40" y="404" width="108" height="138"/>
+        <rect class="door" x="154" y="342" width="108" height="56"/>
+        <rect class="door" x="154" y="404" width="108" height="138"/>
+        <rect class="door" x="402" y="342" width="162" height="56"/>
+        <rect class="door" x="402" y="404" width="78" height="138"/>
+        <rect class="door" x="486" y="404" width="78" height="138"/>
+        <rect fill="#333231" x="74" y="366" width="40" height="6"/>
+        <rect fill="#333231" x="188" y="366" width="40" height="6"/>
+        <rect fill="#333231" x="463" y="366" width="40" height="6"/>
+        <rect fill="#333231" x="136" y="420" width="6" height="30"/>
+        <rect fill="#333231" x="160" y="420" width="6" height="30"/>
+        <rect fill="#333231" x="468" y="420" width="6" height="30"/>
+        <rect fill="#333231" x="492" y="420" width="6" height="30"/>
+        <!-- floor -->
+        <rect fill="#8c7b68" x="0" y="548" width="600" height="52"/>
+      </svg>
+    </div>
+    <div class="choose">
+      <div class="tabs rise" role="group" aria-label="Cabinet finish">
+        <button class="tab" type="button" aria-pressed="true" data-finish="#f4f2ee">White</button>
+        <button class="tab" type="button" aria-pressed="false" data-finish="#8a9a7b">Sage</button>
+        <button class="tab" type="button" aria-pressed="false" data-finish="#2f3b4f">Navy</button>
+        <button class="tab" type="button" aria-pressed="false" data-finish="#6b4a33">Walnut</button>
+      </div>
+      <div class="rise">
+        <h2 id="pick">Try a new finish</h2>
+        <p class="desc">Cabinet refinishing is one of the jobs Leo's customers mention most. Tap a color to see a kitchen wall in it, then call to talk about yours.</p>
+      </div>
+      <div class="cells rise">
+        <a class="cell ink" href="tel:+17708715222">Call for an estimate</a>
+        <a class="cell tone" href="sms:+17708715222">Text a photo of your kitchen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="poster" id="services" aria-label="Services">
+    <ul>
+      <li class="rise">kitchens</li>
+      <li class="rise">cabinets</li>
+      <li class="rise">refinishing</li>
+      <li class="rise">bathrooms</li>
+      <li class="rise">backsplash</li>
+    </ul>
+    <p class="note rise">Full kitchen remodels, new cabinets, refinishing old ones, bathrooms and backsplash tile. The review counts for each are just below.</p>
+  </section>
+
+  <section class="process" id="process" aria-labelledby="how">
+    <h2 id="how" class="rise">From first visit to last drawer</h2>
+    <div class="stage s1 rise"><img src="assets/woodworking-cabinetmaking-workshop-oatlands-park.webp" alt="Cabinetmakers at work in a woodworking shop, 1918" width="1024" height="699" loading="lazy"></div>
+    <p class="t1 rise"><b>On the first visit</b>, Leo measures the room and asks how you actually use your kitchen.</p>
+    <div class="stage s2 rise"><img src="assets/hampton-bay-kitchen-cabinets-02.jpg" alt="An open drawer in white shaker cabinets" width="1920" height="1440" loading="lazy"></div>
+    <p class="t2 rise"><b>Then comes the plan</b>: ready-made cabinets where they save money, custom pieces where they matter.</p>
+    <div class="stage s3 rise"><img src="assets/california-kitchen-finished-11.jpg" alt="A finished kitchen with grey cabinets and white stone counters" width="1920" height="1440" loading="lazy"></div>
+    <p class="t3 rise"><b>By the end</b>, the crew cleans up and walks you through every door and drawer before they leave.</p>
+  </section>
+
+  <section class="proof" aria-labelledby="rated">
+    <h2 id="rated" class="rise">Rated by<span>neighbors</span></h2>
+    <table class="rise">
+      <tbody>
+        <tr><td>2026</td><td>Average rating</td><td>Google</td><td>5.0</td></tr>
+        <tr><td></td><td>Reviews</td><td>Google</td><td>103</td></tr>
+        <tr><td></td><td>Mention kitchen cabinets</td><td>Google reviews</td><td>33</td></tr>
+        <tr><td></td><td>Mention cabinet refinishing</td><td>Google reviews</td><td>26</td></tr>
+        <tr><td></td><td>Mention a beautiful bathroom</td><td>Google reviews</td><td>17</td></tr>
+        <tr><td></td><td>Mention backsplash installation</td><td>Google reviews</td><td>9</td></tr>
+      </tbody>
+    </table>
+    <p class="src rise">From Category 1 Kitchen Remodeling's public Google listing, October 2026.</p>
+  </section>
+
+  <section class="gallery" id="work" aria-label="Work">
+    <figure class="g1 rise"><div class="frame"><img src="assets/california-kitchen-finished-10.jpg" alt="A remodeled kitchen seen from the dining area" width="1920" height="2560" loading="lazy"></div><figcaption>Stand-in photo. Your project photos go here.</figcaption></figure>
+    <figure class="g2 rise"><div class="frame"><img class="drift" src="assets/california-kitchen-finished-13.jpg" alt="Kitchen island with a stone counter and built-in ovens" width="1920" height="1440" loading="lazy"></div><figcaption>Stand-in photo. Your project photos go here.</figcaption></figure>
+    <figure class="g3 rise"><div class="frame"><img src="assets/tiling-the-backsplash.jpg" alt="A backsplash being tiled" width="1023" height="683" loading="lazy"></div><figcaption>Stand-in photo. Your project photos go here.</figcaption></figure>
+  </section>
+
+  <section class="contact" id="contact" aria-label="Contact">
+    <p class="ask rise">Tell Leo what you want your kitchen to be.</p>
+    <a class="phone rise" href="tel:+17708715222">(770) 871-5222</a>
+    <div class="corners rise">
+      <span>Mon–Thu 8–6 · Fri 8–5 · Sat 10–3:30 · Sun closed</span>
+      <span>Metro Atlanta, Georgia</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <div class="cols">
+      <div><p>Hours</p><p>Mon–Thu 8 am–6 pm</p><p>Fri 8 am–5 pm</p><p>Sat 10 am–3:30 pm</p></div>
+      <div><ul><li class="head">Services</li><li>Kitchen remodels</li><li>Cabinets</li><li>Cabinet refinishing</li><li>Bathrooms</li><li>Backsplash</li></ul></div>
+      <div><p>Call or text</p><p><a href="tel:+17708715222">(770) 871-5222</a></p></div>
+      <div><p>This preview</p><p>Made by Daniel, a local web designer in Georgia, for Leo and the Category 1 crew.</p></div>
+    </div>
+    <p class="credits">Stand-in pictures: <a href="https://www.rawpixel.com/image/9855511/woodworking-and-cabinetmaking-workshop-oatlands-park-surrey-england-1918">“Woodworking cabinetmaking workshop Oatlands Park”</a> by museumofnewzealand, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>, via rawpixel; <a href="https://commons.wikimedia.org/w/index.php?curid=142381222">“Hampton Bay Kitchen Cabinets 02”</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=146045633">“California Kitchen Finished 13”</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=146045628">“11”</a> and <a href="https://commons.wikimedia.org/w/index.php?curid=146045626">“10”</a> by Stilfehler, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons; <a href="https://www.flickr.com/photos/69655432@N00/5129702720">“Tiling the Backsplash”</a> by Lori L. Stalteri, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Flickr. None of these show Category 1's own work.</p>
+  </div>
+  <div></div>
+  <div>
+    <p class="endmark" aria-hidden="true">Category 1</p>
+    <p class="legal">Preview only · Category 1 Kitchen Remodeling LLC</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const root = document.documentElement;
+  document.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      root.style.setProperty('--finish', btn.dataset.finish);
+    });
+  });
+  const items = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const sibs = [...e.target.parentElement.querySelectorAll(':scope > .rise')];
+      e.target.style.transitionDelay = (Math.max(0, sibs.indexOf(e.target)) * 75) + 'ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12 });
+  items.forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
